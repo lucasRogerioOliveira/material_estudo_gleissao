@@ -1,0 +1,118 @@
+﻿CodeBlocks http://prdownload.berlios.de/codeblocks/codeblocks-13.12mingw-setup-TDM-GCC-481.exe
+"#include" : é para incluir determinada biblioteca
+<stdio.h> seria a biblioteca atual
+".h" seria o pacote, é um tipo de extençao de biblioteca 
+
+|g|l|e|i|s|s|a|o| | | | | | | | 
+Para fazer uma entrada de texto e para exibir uma "resposta"
+#include <stdio.h>
+
+int main (){  // Função principal
+    int age;   //Cria a variavel que eu vou traalhar com o "int", "age" seria o nome da variavel
+    char objeto[20];// "char" é uma entrada de caracteres, 20 é o numero prédefinido de entrada, seráo até 20 letras ou numeros, que seja
+
+
+    printf("Digite a idade\n");   // printf é um comando pra exibir alguma mensagem
+    scanf("%d",&age);             // scanf é uma entrada de dados, no caso texto do teclado, uma informação ou sei lá, "%d" define que essa informação seja um valor inteiro
+    printf("ppk");
+    scanf("%s",&objeto);//"%s" ele serve ler uma cadeia de charecteres, "fraze",
+    printf("HELLO Gleissão %d\n todos gostamos de uma boa %s",age,objeto); // nesse caso é o que printf vai exibir depois de receber essa informação
+    return 0; // essa linha finaliza o programa com sucesso a função principal
+
+
+}
+
+Aqui uzando condição
+
+#include <stdio.h>
+
+int main (){  // Função principal
+    int idade;
+    printf("Qual a sua idade?\n");
+    scanf("%d",&idade);
+    if (idade >= 21){
+        printf("Você pode beber nos Estados Unidos\n");
+    }
+
+    else if (idade >= 18){
+        printf("Você pode beber no Brasil\n");
+    }
+    else{
+        printf("Ta barrado");
+    }
+    return 0; // essa linha finaliza o programa com sucesso a função principal
+
+
+}
+Calculadora, deu trabalho em kkk
+#include <stdio.h>
+
+int main (){  // Função principal
+    char tipo_de_calculadora[1];//char novamente para pode inserie um caractere "[1]" é o numero de caracteres
+    double primeiro_valor = 0;// double é para uma integral longa, tipo numeros complexos, com virgula e tal
+    double Segundo_valor = 0;
+    double resultado;//variável de resultado
+    printf("Digite o primeiro número");
+    scanf("%lf",&primeiro_valor);//%lf para o floating, ou seja exibir a variável, o l por ser uma double
+    printf("Digite a operação desejada");
+    scanf("%s", &tipo_de_calculadora);//%s é para exibir a variavel "char" que é a leitura de uma linha, string
+    printf("Digite o segundo número");
+    scanf("%lf", &Segundo_valor);
+    if (tipo_de_calculadora[0] == '+'){// condição imposta, "[0]" está aqui para identificar qual a váriavel que vai ser exibida, no caso 0 é a primeira posição
+    resultado = primeiro_valor + Segundo_valor;
+    }
+    else if(tipo_de_calculadora[0] == '-'){
+    resultado = primeiro_valor-Segundo_valor;
+    }
+    else if(tipo_de_calculadora[0] == '*'){
+    resultado = primeiro_valor*Segundo_valor;
+    }
+    else if(tipo_de_calculadora[0] == '/'){
+    resultado = primeiro_valor/Segundo_valor;
+    }
+    printf("resultado%lf", resultado);
+    return 0; // essa linha finaliza o programa com sucesso a função principal
+
+calculo de notas
+#include <stdio.h>
+
+int main (){  // Função principal
+    int numero_de_notas;
+    int valor_em_dinheiro;
+
+    printf("Digite o valor em dinheiro\n");
+    scanf ("%d",&valor_em_dinheiro);
+    if (valor_em_dinheiro >= 100){
+        numero_de_notas = (valor_em_dinheiro/100);
+        printf("Numero de notas de 100:%d\n", numero_de_notas);
+        valor_em_dinheiro = valor_em_dinheiro%100;// "%" serve para pegar o "resto" da divisão
+    }
+    if (valor_em_dinheiro >= 50){
+        numero_de_notas = (valor_em_dinheiro/50);
+        printf("Numero de notas de 50:%d\n",numero_de_notas);
+        valor_em_dinheiro = valor_em_dinheiro%50;
+    }
+    if(valor_em_dinheiro >= 20){
+        numero_de_notas = (valor_em_dinheiro/20);
+        printf("Numero de notas de 20:%d\n",numero_de_notas);
+        valor_em_dinheiro = valor_em_dinheiro%20;
+    }
+    if(valor_em_dinheiro >= 10){
+        numero_de_notas = (valor_em_dinheiro/10);
+        printf("Numero de notas de 10:%d\n",numero_de_notas);
+        valor_em_dinheiro = valor_em_dinheiro%10;
+    }
+    if(valor_em_dinheiro >= 5){
+        numero_de_notas = (valor_em_dinheiro/5);
+        printf("Numero de notas de 5:%d\n",numero_de_notas);
+        valor_em_dinheiro = valor_em_dinheiro%5;
+    }
+    if (valor_em_dinheiro >= 2){
+        numero_de_notas = (valor_em_dinheiro/2);
+        printf("Numero de notas de 2:%d\n",numero_de_notas);
+
+    }
+            return 0; // essa linha finaliza o programa com sucesso a função principal
+
+
+}
