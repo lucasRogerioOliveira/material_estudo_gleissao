@@ -2,7 +2,7 @@
 
 int main (){  // Função principal
     int numero_de_notas;
-    int valor_em_dinheiro;
+    int valor_em_dinheiro;	
 
     printf("Digite o valor em dinheiro\n");
     scanf ("%d",&valor_em_dinheiro);
@@ -37,7 +37,5 @@ int main (){  // Função principal
 
     }
 
-            return 0; // essa linha finaliza o programa com sucesso a função principal
-
-
+    return 0; // essa linha finaliza o programa com sucesso a função principal
 }
